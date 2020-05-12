@@ -1,0 +1,11 @@
+<form [formGroup]="form">
+    <label>Username</label>
+    <input type="text" formControlName="username" />
+
+    <label>Password</label>
+    <input type="password" formControlName="password" />
+    {{error}}
+    <button (click)="submit(form)">login</button>
+    
+</form>
+<pre>{{form.value | json}}</pre>
